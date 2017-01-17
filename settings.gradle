@@ -1,1 +1,1 @@
-include ':app', ':mvploader'
+include ':app', ':mvp-loader'

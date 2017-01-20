@@ -13,7 +13,7 @@ import de.marco_egger.mvploaderexample.util.Injection;
 
 import java.util.List;
 
-public class TasksActivity extends MvpLoaderAppCompatActivity<TaskPresenter, TasksContract.View>
+public class TasksActivity extends MvpLoaderAppCompatActivity<TasksContract.Presenter, TasksContract.View>
         implements TasksContract.View {
 
     private TasksAdapter adapter;
@@ -50,11 +50,10 @@ public class TasksActivity extends MvpLoaderAppCompatActivity<TaskPresenter, Tas
 
     @NonNull
     @Override
-    protected PresenterFactory<TaskPresenter> getPresenterFactory() {
-        return new PresenterFactory<TaskPresenter>() {
+    protected PresenterFactory<TasksContract.Presenter> getPresenterFactory() {
+        return new PresenterFactory<TasksContract.Presenter>() {
             @Override
-            public TaskPresenter create() {
-                // Inject the correct repository, this is need for better testing ability
+            public TasksContract.Presenter create() {
                 return new TaskPresenter(Injection.provideTasksRepository());
             }
         };

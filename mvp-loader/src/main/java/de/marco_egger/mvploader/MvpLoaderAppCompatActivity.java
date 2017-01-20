@@ -15,7 +15,7 @@ import de.marco_egger.mvploader.presenter.PresenterSupportLoader;
  * @author Marco Egger
  * @see MvpLoaderActivity
  */
-public abstract class MvpLoaderAppCompatActivity<P extends BasePresenter<V>, V> extends AppCompatActivity {
+public abstract class MvpLoaderAppCompatActivity<P extends BasePresenter> extends AppCompatActivity {
 
     private static final int DEFAULT_LOADER_ID = 101;
 
@@ -50,7 +50,7 @@ public abstract class MvpLoaderAppCompatActivity<P extends BasePresenter<V>, V> 
         super.onResume();
 
         //noinspection unchecked
-        presenter.onViewAttached((V) this);
+        presenter.onViewAttached(this);
     }
 
     @Override

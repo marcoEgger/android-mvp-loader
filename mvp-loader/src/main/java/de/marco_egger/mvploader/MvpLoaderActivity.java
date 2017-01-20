@@ -12,7 +12,7 @@ import de.marco_egger.mvploader.presenter.PresenterLoader;
  *
  * @author Marco Egger
  */
-public abstract class MvpLoaderActivity<P extends BasePresenter<V>, V> extends Activity {
+public abstract class MvpLoaderActivity<P extends BasePresenter> extends Activity {
 
     private static final int DEFAULT_LOADER_ID = 101;
 
@@ -47,7 +47,7 @@ public abstract class MvpLoaderActivity<P extends BasePresenter<V>, V> extends A
         super.onResume();
 
         //noinspection unchecked
-        presenter.onViewAttached((V) this);
+        presenter.onViewAttached(this);
     }
 
     @Override

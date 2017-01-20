@@ -13,7 +13,7 @@ import de.marco_egger.mvploaderexample.util.Injection;
 
 import java.util.List;
 
-public class TasksActivity extends MvpLoaderAppCompatActivity<TasksContract.Presenter, TasksContract.View>
+public class TasksActivity extends MvpLoaderAppCompatActivity<TasksContract.Presenter>
         implements TasksContract.View {
 
     private TasksAdapter adapter;

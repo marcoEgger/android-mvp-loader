@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/marcoEgger/android-mvp-loader'
     gitUrl = 'https://github.com/marcoEgger/android-mvp-loader.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.1.0'
 
     developerId = 'marcoegger'
     developerName = 'Marco Egger'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

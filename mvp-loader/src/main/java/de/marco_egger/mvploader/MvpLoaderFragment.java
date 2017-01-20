@@ -11,7 +11,7 @@ import de.marco_egger.mvploader.presenter.PresenterLoader;
 /**
  * @author Marco Egger
  */
-public abstract class MvpLoaderFragment<P extends BasePresenter<V>, V> extends Fragment {
+public abstract class MvpLoaderFragment<P extends BasePresenter> extends Fragment {
 
     private static final int DEFAULT_LOADER_ID = 101;
 
@@ -44,7 +44,7 @@ public abstract class MvpLoaderFragment<P extends BasePresenter<V>, V> extends F
         super.onResume();
 
         //noinspection unchecked
-        presenter.onViewAttached((V) this);
+        presenter.onViewAttached(this);
     }
 
     @Override
